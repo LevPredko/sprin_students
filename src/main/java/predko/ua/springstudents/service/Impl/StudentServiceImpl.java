@@ -15,10 +15,12 @@ import java.util.List;
 @AllArgsConstructor
 public class StudentServiceImpl implements StudentService {
     private final StudentRepository repository;
+
     @Override
     public List<Student> findAllStudent() {
         return repository.findAll();
     }
+
     @Override
     public Student saveStudent(Student student) {
         return repository.save(student);
@@ -27,6 +29,11 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Student findByEmail(String email) {
         return repository.findStudentByEmail(email);
+    }
+
+    @Override
+    public Student findById(Long id) {
+        return repository.findStudentById(id);
     }
 
     @Override

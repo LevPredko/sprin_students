@@ -12,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class InMemoryStudentServiceImpl implements StudentService {
     private final InMemoryStudentDAO repository;
+
     @Override
     public List<Student> findAllStudent() {
         return repository.findAllStudent();
@@ -25,6 +26,11 @@ public class InMemoryStudentServiceImpl implements StudentService {
     @Override
     public Student findByEmail(String email) {
         return repository.findByEmail(email);
+    }
+
+    @Override
+    public Student findById(Long id) {
+        return repository.findById(id);
     }
 
     @Override

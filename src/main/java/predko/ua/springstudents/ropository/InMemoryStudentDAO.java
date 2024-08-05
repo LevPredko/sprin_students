@@ -2,6 +2,7 @@ package predko.ua.springstudents.ropository;
 
 import org.springframework.stereotype.Repository;
 import predko.ua.springstudents.model.Student;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -26,12 +27,19 @@ public class InMemoryStudentDAO {
                 .orElse(null);
     }
 
+    public Student findById(Long id) {
+        return STUDENTS.stream()
+                .filter(element -> element.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
     public Student updateStudent(Student student) {
         var studentIndex = IntStream.range(0, STUDENTS.size())
                 .filter(index -> STUDENTS.get(index).getEmail().equals(student.getEmail()))
                 .findFirst()
                 .orElse(-1);
-        if(studentIndex > -1){
+        if (studentIndex > -1) {
             STUDENTS.set(studentIndex, student);
             return student;
         }

@@ -2,6 +2,7 @@ package predko.ua.springstudents.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -19,7 +20,8 @@ public class Student {
     private String email;
     @Transient
     private int age;
-    public int getAge(){
+
+    public int getAge() {
         return Period.between(dateOfBirth, LocalDate.now()).getYears();
     }
 }

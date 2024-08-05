@@ -12,29 +12,34 @@ import java.util.List;
 @AllArgsConstructor
 public class StudentController {
     private final StudentService service;
+
     @GetMapping
-    public List<Student> findAllStudent(){
+    public List<Student> findAllStudent() {
         return service.findAllStudent();
     }
 
     @PostMapping("save_student")
-    public Student saveStudent(@RequestBody Student student){
+    public Student saveStudent(@RequestBody Student student) {
         return service.saveStudent(student);
     }
 
     @GetMapping("/{email}")
-    public Student findByEmail(@PathVariable String email){
+    public Student findByEmail(@PathVariable String email) {
         return service.findByEmail(email);
     }
 
+    @GetMapping("id/{id}")
+    public Student findById(@PathVariable Long id) {
+        return service.findById(id);
+    }
+
     @PutMapping("update_student")
-    public Student updateStudent(@RequestBody Student student){
+    public Student updateStudent(@RequestBody Student student) {
         return service.updateStudent(student);
     }
 
     @DeleteMapping("delete_student/{email}")
-    public void deleteStudent(@PathVariable String email){
+    public void deleteStudent(@PathVariable String email) {
         service.deleteStudent(email);
     }
-
 }
