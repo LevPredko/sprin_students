@@ -39,7 +39,11 @@ public class InMemoryStudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void deleteStudent(String email) {
-        repository.deleteStudent(email);
+    public void deleteStudentByEmail(String email) {
+        repository.deleteStudentByEmail(email);
+    }
+    @Override
+    public void deleteStudentById(Long id) {
+        repository.deleteStudentById(id);
     }
 }

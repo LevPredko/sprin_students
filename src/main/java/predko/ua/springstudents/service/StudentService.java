@@ -17,6 +17,7 @@ public interface StudentService {
 
     Student updateStudent(Student student);
 
-    void deleteStudent(String email);
+    void deleteStudentByEmail(String email);
+    void deleteStudentById(Long id);
 }
 

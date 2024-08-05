@@ -6,6 +6,7 @@ import predko.ua.springstudents.model.Student;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
     void deleteByEmail(String email);
+    void deleteById(Long id);
 
     Student findStudentByEmail(String email);
 

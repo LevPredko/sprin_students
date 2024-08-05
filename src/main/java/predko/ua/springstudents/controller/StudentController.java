@@ -23,7 +23,7 @@ public class StudentController {
         return service.saveStudent(student);
     }
 
-    @GetMapping("/{email}")
+    @GetMapping("email/{email}")
     public Student findByEmail(@PathVariable String email) {
         return service.findByEmail(email);
     }
@@ -38,8 +38,12 @@ public class StudentController {
         return service.updateStudent(student);
     }
 
-    @DeleteMapping("delete_student/{email}")
-    public void deleteStudent(@PathVariable String email) {
-        service.deleteStudent(email);
+    @DeleteMapping("delete_student/email/{email}")
+    public void deleteStudentByEmail(@PathVariable String email) {
+        service.deleteStudentByEmail(email);
+    }
+    @DeleteMapping("delete_student/id/{id}")
+    public void deleteStudentById(@PathVariable Long id) {
+        service.deleteStudentById(id);
     }
 }

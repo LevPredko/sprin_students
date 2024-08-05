@@ -43,7 +43,13 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     @Transactional
-    public void deleteStudent(String email) {
+    public void deleteStudentByEmail(String email) {
         repository.deleteByEmail(email);
+    }
+
+    @Override
+    @Transactional
+    public void deleteStudentById(Long id) {
+        repository.deleteById(id);
     }
 }
