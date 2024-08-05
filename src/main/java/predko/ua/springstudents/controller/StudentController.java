@@ -8,7 +8,7 @@ import predko.ua.springstudents.service.StudentService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/ap/students")
+@RequestMapping("/api/students")
 @AllArgsConstructor
 public class StudentController {
     private final StudentService service;
