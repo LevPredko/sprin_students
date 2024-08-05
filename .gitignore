@@ -1,6 +1,15 @@
+# Maven
 target/
+
+# IntelliJ IDEA
 .idea/
 *.iml
-.mvn/
+
+# Backup
 .gitignore_backup
 backup/
+
+# Maven Wrapper
+!mvnw
+!mvnw.cmd
+!.mvn/wrapper/
