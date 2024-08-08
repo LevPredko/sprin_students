@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Список студентів</title>
+</head>
+<body>
+<h1>Список студентів</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Ім'я</th>
+        <th>Прізвище</th>
+        <th>Email</th>
+        <th>Дата народження</th>
+        <th>Вік</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.firstName}">Ім'я</td>
+        <td th:text="${student.lastName}">Прізвище</td>
+        <td th:text="${student.email}">Email</td>
+        <td th:text="${student.dateOfBirth}">Дата народження</td>
+        <td th:text="${student.age}">Вік</td>
+    </tr>
+    </tbody>
+</table>
+<a href="/students/add">Додати студента</a>
+</body>
+</html>
