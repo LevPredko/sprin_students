@@ -22,6 +22,10 @@ public class Student {
     private int age;
 
     public int getAge() {
-        return Period.between(dateOfBirth, LocalDate.now()).getYears();
+        if (this.dateOfBirth == null) {
+            return 0;
+        }
+        return Period.between(this.dateOfBirth, LocalDate.now()).getYears();
     }
+
 }
