@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Додати нового студента</h1>
-<form action="#" th:action="@{/api/students/save_student}" th:object="${student}" method="post">
+<form action="#" th:action="@{/api/students/add}" th:object="${student}" method="post">
   <label for="firstName">Ім'я: </label>
   <input type="text" id="firstName" th:field="*{firstName}" /><br>
 
