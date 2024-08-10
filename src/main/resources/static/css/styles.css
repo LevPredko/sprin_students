@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 7%;
+    padding: 20px;
+}
+
+h1 {
+    color: antiquewhite;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00ff76;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6dea8b;
+}
+
+a {
+    display: inline-block; /* Фон займає тільки область тексту */
+    text-align: center; /* Центрування тексту всередині посилання */
+    text-decoration: none; /* Прибирає підкреслення */
+    color: antiquewhite; /* Колір тексту */
+    background-color: rgba(129, 40, 40, 0.6); /* Фон */
+    padding: 5px 10px; /* Відступи всередині посилання */
+    border-radius: 4px; /* Округлені кути */
+}
+
+.container {
+    margin: 10px;
+    text-align: center; /* Центрування посилання */
+}
+
+a:hover {
+    text-decoration: underline;
+}
