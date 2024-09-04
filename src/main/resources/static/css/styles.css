@@ -1,16 +1,65 @@
-body {
+/*INDEX*/
+
+/* Замість .index-page body використовуємо просто .index-page */
+.index-page {
+    background-color: #000000;
+    padding: 20px;
+}
+
+.index-page h1 {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 90px;
+}
+
+.index-page h2 {
+    color: antiquewhite;
+}
+
+.index-page img {
+    width: 250px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    margin: 10px;
+}
+
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: antiquewhite;
+    background-color: #e04343;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: #ff0000;
+}
+
+
+
+/*ADD STUDENT*/
+
+body.add-student-page{
     font-family: Arial, sans-serif;
     background-color: #000000;
     margin: 7%;
     padding: 20px;
 }
 
-h1 {
+.add-student-page h1 {
     color: antiquewhite;
     text-align: center;
 }
 
-form {
+.add-student-page form {
     max-width: 400px;
     margin: 0 auto;
     padding: 50px;
@@ -19,16 +68,16 @@ form {
     box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
 }
 
-label {
+.add-student-page label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: antiquewhite;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="date"] {
+.add-student-page input[type="text"],
+.add-student-page input[type="email"],
+.add-student-page input[type="date"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 20px;
@@ -36,7 +85,7 @@ input[type="date"] {
     border: 1px solid #000000;
 }
 
-button {
+.add-student-page button {
     width: 100%;
     padding: 10px;
     background-color: #00ff76;
@@ -47,11 +96,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.add-student-page button:hover {
     background-color: #6dea8b;
 }
 
-a {
+.add-student-page a {
     display: inline-block; /* Фон займає тільки область тексту */
     text-align: center; /* Центрування тексту всередині посилання */
     text-decoration: none; /* Прибирає підкреслення */
@@ -61,11 +110,11 @@ a {
     border-radius: 4px; /* Округлені кути */
 }
 
-.container {
+.add-student-page .container {
     margin: 10px;
     text-align: center; /* Центрування посилання */
 }
 
-a:hover {
+.add-student-page a:hover {
     text-decoration: underline;
 }
