@@ -5,6 +5,8 @@ target/
 .idea/
 *.iml
 
+.DS_Store
+
 # Backup
 .gitignore_backup
 backup/
