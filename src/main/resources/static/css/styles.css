@@ -1,6 +1,5 @@
 /*INDEX*/
 
-/* Замість .index-page body використовуємо просто .index-page */
 .index-page {
     background-color: #000000;
     padding: 20px;
@@ -25,13 +24,12 @@
     margin: 10px;
 }
 
-
-.button-link {
+.index-page-button-link {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
     color: antiquewhite;
-    background-color: #ff0000;
+    background-color: #9e0000;
     text-align: center;
     text-decoration: none;
     border-radius: 4px;
@@ -39,8 +37,8 @@
     cursor: pointer;
 }
 
-.button-link:hover {
-    background-color: #e04343;
+.index-page-button-link:hover {
+    background-color: #800000;
 }
 
 
@@ -49,8 +47,8 @@
 
 body.add-student-page{
     font-family: Arial, sans-serif;
-    background-color: #000000;
-    margin: 7%;
+    background-color: #131313FF;
+    margin: 5%;
     padding: 20px;
 }
 
@@ -63,7 +61,7 @@ body.add-student-page{
     max-width: 400px;
     margin: 0 auto;
     padding: 50px;
-    background-color: #000000;
+    background-color: #131313FF;
     border-radius: 8px;
     box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
 }
@@ -78,43 +76,134 @@ body.add-student-page{
 .add-student-page input[type="text"],
 .add-student-page input[type="email"],
 .add-student-page input[type="date"] {
-    width: 100%;
+    width: 96%;
     padding: 8px;
     margin-bottom: 20px;
     border-radius: 4px;
     border: 1px solid #000000;
+    background-color: antiquewhite;
 }
 
 .add-student-page button {
-    width: 100%;
-    padding: 10px;
-    background-color: #00ff76;
-    color: #000000;
+    width: 50%;
+    padding: 10px 15px;
+    background-color: #07ad32;
+    color: antiquewhite;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
 
 .add-student-page button:hover {
-    background-color: #6dea8b;
+    background-color: #01cb34;
 }
 
 .add-student-page a {
-    display: inline-block; /* Фон займає тільки область тексту */
-    text-align: center; /* Центрування тексту всередині посилання */
-    text-decoration: none; /* Прибирає підкреслення */
-    color: antiquewhite; /* Колір тексту */
-    background-color: rgba(129, 40, 40, 0.6); /* Фон */
-    padding: 5px 10px; /* Відступи всередині посилання */
-    border-radius: 4px; /* Округлені кути */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: antiquewhite;
+    background-color: #9e0000;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
-.add-student-page .container {
-    margin: 10px;
-    text-align: center; /* Центрування посилання */
+.add-student-page a[href="/students"] {
+    display: inline-block;
+    width: 39.5%;
+    background-color: #9e0000;
+    color: antiquewhite;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
 }
 
-.add-student-page a:hover {
-    text-decoration: underline;
+.add-student-page a[href="/students"]:hover {
+    background-color: #800000;
+}
+
+.add-student-page-button {
+    display: flex;
+    justify-content: center;  /* Центрування кнопок по горизонталі */
+    gap: 20px;  /* Відстань між кнопками */
+}
+
+/*STUDENTS*/
+
+body.students-page {
+    font-family: Arial, sans-serif;
+    background-color: #131313FF;
+    color: antiquewhite;
+    margin: 0;
+    padding: 20px;
+}
+
+.students-page h1 {
+    text-align: center;
+    color: #b30000;
+    border-bottom: 2px solid #b30000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.students-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.students-page th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.students-page th {
+    background-color: #333333;
+    color: antiquewhite;
+}
+
+.students-page td {
+    background-color: #262626;
+    color: antiquewhite;
+}
+
+.students-page tr:nth-child(even) td {
+    background-color: #1f1f1f;
+}
+
+.students-page button {
+    background-color: #9e0000;
+    color: antiquewhite;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.students-page button:hover {
+    background-color: #800000;
+}
+
+.students-page a {
+    text-decoration: none;
+}
+
+.students-page a:hover {
+    opacity: 0.8;
+}
+
+.students-page a[href="students/add"] {
+    display: inline-block;
+    margin-top: 2px;
+    background-color: #9e0000;
+    color: antiquewhite;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.students-page a[href="students/add"]:hover {
+    background-color: #800000;
 }
