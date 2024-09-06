@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Список студентів</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Student List</title>
 </head>
-<body>
-<h1>Список студентів</h1>
+<body class="students-page">
+<h1>Student List</h1>
 
 <table border="1">
     <tr>
         <th>ID</th>
-        <th>Ім'я</th>
-        <th>Прізвище</th>
+        <th>First Name</th>
+        <th>Last Name</th>
         <th>Email</th>
-        <th>Дата народження</th>
-        <th>Вік</th>
-        <th>Дії</th>
+        <th>Date of Birth</th>
+        <th>Age</th>
+        <th>Action</th>
     </tr>
     <tr th:each="student : ${students}">
         <td th:text="${student.id}">1</td>
-        <td th:text="${student.firstName}">Ім'я</td>
-        <td th:text="${student.lastName}">Прізвище</td>
+        <td th:text="${student.firstName}">First Name</td>
+        <td th:text="${student.lastName}">Last Name</td>
         <td th:text="${student.email}">Email</td>
-        <td th:text="${student.dateOfBirth}">Дата народження</td>
-        <td th:text="${student.age}">Вік</td>
+        <td th:text="${student.dateOfBirth}">Date of Birth</td>
+        <td th:text="${student.age}">Age</td>
         <td>
-            <!-- Кнопка для оновлення студента -->
             <a th:href="@{/students/update/{id}(id=${student.id})}">
-                <button>Оновити</button>
+                <button>Update</button>
             </a>
-            <!-- Кнопка для видалення студента -->
             <a th:href="@{/students/delete/{id}(id=${student.id})}">
-                <button>Видалити</button>
+                <button>Delete</button>
             </a>
         </td>
     </tr>
 </table>
-<a href="students/add">Додати студента</a>
+<a href="students/add">Add Student</a>
 </body>
 </html>
