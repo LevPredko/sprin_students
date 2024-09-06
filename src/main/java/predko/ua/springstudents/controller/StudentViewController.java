@@ -16,7 +16,10 @@ import java.util.List;
 public class StudentViewController {
 
     private final StudentService studentService;
-
+    @GetMapping("/")
+    public String viewMainPage() {
+        return "index";
+    }
     @GetMapping("/students")
     public String viewStudents(Model model) {
         List<Student> students = studentService.findAllStudent();
