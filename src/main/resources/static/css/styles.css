@@ -60,7 +60,7 @@ body.add-student-page{
 .add-student-page form {
     max-width: 400px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 40px;
     background-color: #131313FF;
     border-radius: 8px;
     box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
@@ -205,5 +205,102 @@ body.students-page {
 }
 
 .students-page a[href="students/add"]:hover {
+    background-color: #800000;
+}
+
+
+
+/*UPDATE*/
+
+body.update-page {
+    font-family: Arial, sans-serif;
+    background-color: #131313FF;
+    margin: 5%;
+    padding: 20px;
+}
+
+.update-page h1 {
+    text-align: center;
+    color: antiquewhite;
+    margin-top: 20px;
+}
+
+.update-page form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #131313FF;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
+}
+
+.update-page label {
+    display: block;
+    margin-bottom: 8px;
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+.update-page input[type="text"],
+.update-page input[type="email"],
+.update-page input[type="date"] {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ff0000;
+    border-radius: 4px;
+    background-color: antiquewhite;
+}
+
+.update-page button {
+    width: 50%;
+    padding: 10px;
+    background-color: #07ad32;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.update-page button:hover {
+    background-color: #01cb34;
+}
+
+.update-page a {
+    display: block;
+    text-align: center;
+    color: #ff0000;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.update-page a:hover {
+    text-decoration: underline;
+}
+
+.update-student-page-button a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: antiquewhite;
+    background-color: #9e0000;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.update-student-page-button a[href="/students"] {
+    display: inline-block;
+    width: 39.5%;
+    background-color: #9e0000;
+    color: antiquewhite;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.update-student-page-button a[href="/students"]:hover {
     background-color: #800000;
 }
