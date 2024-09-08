@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Видалити студента</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Delete a student</title>
 </head>
-<body>
-<h1>Видалити студента</h1>
-<form th:action="@{/api/students/delete_student/id/{id}(id=${student.id})}" method="post">
-  <p>Ви впевнені, що хочете видалити цього студента?</p>
-  <p>Ім'я: <span th:text="${student.firstName}">FirstName</span></p>
-  <p>Прізвище: <span th:text="${student.lastName}">LastName</span></p>
-  <p>Email: <span th:text="${student.email}">Email</span></p>
-  <p>Дата народження: <span th:text="${student.dateOfBirth}">Дата народження</span></p>
-  <p>Вік: <span th:text="${student.age}">Вік</span></p>
+<body class="delete-page">
+<h1>Delete a student</h1>
 
-  <button type="submit">Видалити</button>
+<form th:action="@{/api/students/delete_student/id/{id}(id=${student.id})}" method="post">
+    <table class="student-delete-info">
+        <tr>
+            <td>FirstName:</td>
+            <td><span th:text="${student.firstName}">FirstName</span></td>
+        </tr>
+        <tr>
+            <td>LastName:</td>
+            <td><span th:text="${student.lastName}">LastName</span></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><span th:text="${student.email}">Email</span></td>
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td><span th:text="${student.dateOfBirth}">Date of Birth</span></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><span th:text="${student.age}">Age</span></td>
+        </tr>
+    </table>
+<div class="delete-student-page-button">
+    <button type="submit">Delete</button>
+    <a href="/students">Cancel</a>
+</div>
 </form>
-<a href="/students">Назад до списку студентів</a>
+
 </body>
 </html>
