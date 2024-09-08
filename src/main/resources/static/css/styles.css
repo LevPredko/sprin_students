@@ -304,3 +304,104 @@ body.update-page {
 .update-student-page-button a[href="/students"]:hover {
     background-color: #800000;
 }
+
+
+
+/*DELETE*/
+body.delete-page {
+    font-family: Arial, sans-serif;
+    background-color: #131313FF;
+    margin: 5%;
+    padding: 20px;
+}
+
+.delete-page h1 {
+    text-align: center;
+    color: antiquewhite;
+    margin-top: 20px;
+}
+
+.delete-page form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #131313FF;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
+}
+
+.student-delete-info {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.student-delete-info td {
+    padding: 10px;
+    color: antiquewhite;
+    border: 1px solid #a15b5b;
+}
+
+.student-delete-info td:first-child {
+    font-weight: bold;
+    text-align: left;
+    width: 40%;
+}
+
+.student-delete-info td:last-child {
+    text-align: left;
+    width: 60%;
+}
+
+.delete-page button {
+    width: 50%;
+    padding: 10px;
+    background-color: #ff0000;
+    color: antiquewhite;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-page button:hover {
+    background-color: #9e0000;
+}
+
+.delete-page a {
+    display: block;
+    text-align: center;
+    color: #07ad32;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.delete-page a:hover {
+    text-decoration: underline;
+}
+.delete-student-page-button a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: antiquewhite;
+    background-color: #07ad32;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.delete-student-page-button a[href="/students"] {
+    display: inline-block;
+    width: 39.5%;
+    background-color: #07ad32;
+    color: antiquewhite;
+    margin-top: 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.delete-student-page-button a[href="/students"]:hover {
+    background-color: #01cb34;
+}
