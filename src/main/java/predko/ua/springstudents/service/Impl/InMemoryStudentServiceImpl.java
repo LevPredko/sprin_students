@@ -37,7 +37,6 @@ public class InMemoryStudentServiceImpl implements StudentService {
     public Student updateStudent(Student student) {
         return repository.updateStudent(student);
     }
-
     @Override
     public void deleteStudentByEmail(String email) {
         repository.deleteStudentByEmail(email);
